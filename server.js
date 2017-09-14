@@ -51,6 +51,12 @@ app.get('/bad',(req,res)=>{
     });
 });
 
+app.get('/projects',(req,res)=>{
+    res.render('projects.hbs',{
+        currentPage : 'Projects Page'
+    });
+});
+
 app.use(express.static(__dirname + '/public'));
 
 app.listen(port,()=>{
